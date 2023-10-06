@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pa-test</title>
+    <meta name="description" content="test task">
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="pa-container-fluid header__wrap">
+        <a class="header__logo" href="#">
+            <img class="header__logo-image" src="src/images/logo.svg" width="159" height="32" alt="logo">
+        </a>
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="#">Atlas</a></li>
+                <li class="header__menu-item"><a href="#">Community</a></li>
+                <li class="header__menu-item"><a href="#">Solutions</a></li>
+                <li class="header__menu-item"><a href="#">About</a></li>
+                <li class="header__menu-item"><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+        <div class="header__additional">
+            <button class="header__search" type="button" aria-label="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L19.2929 20.7071ZM20.7071 19.2929L15.7071 14.2929L14.2929 15.7071L19.2929 20.7071L20.7071 19.2929Z"
+                          fill="#424347"/>
+                    <rect x="4" y="4" width="13" height="13" rx="5" stroke="#424347" stroke-width="2"/>
+                </svg>
+            </button>
+            <button class="header__toggler-menu" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 8H19" stroke="#2D2D33" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5 16H19" stroke="#2D2D33" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="header__autorisation">
+                <a class="header__register" href="#">Register</a>
+                <span class="header__divider">/</span>
+                <a class="header__signin" href="#">Sign in</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12H3.5" stroke="#424347" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13.5 4.5L18.7373 9.73726C19.5293 10.5293 19.9253 10.9253 20.0737 11.382C20.2042 11.7837 20.2042 12.2163 20.0737 12.618C19.9253 13.0747 19.5293 13.4707 18.7373 14.2627L13.5 19.5"
+                          stroke="#424347" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="first-screen">
+        <div class="pa-container">
+            <div class="first-screen__wrap">
+                <div class="first-screen__content">
+                    <img class="first-screen__icon" src="src/images/icon-camp.svg" width="64" height="64">
+                    <h1 class="first-screen__title">Request PayAtlas <em>Assistant</em></h1>
+                    <div class="first-screen__description">We’re looking forward to get to know you and your team.
+                        Together,
+                        we will look at how to use PayAtlas within your company and find the perfect partner for your
+                        business.
+                    </div>
+                    <a class="first-screen__link" href="#">How PayAtlas Assistant work
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.99976 3.99982L8.8 3.99995C9.92011 3.99999 10.4802 4.00001 10.908 4.21801C11.2843 4.40977 11.5902 4.71574 11.782 5.09207C11.9999 5.5199 11.9999 6.07996 11.9999 7.20006L11.9998 10.9998"
+                                  stroke="#9154EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.75771 12.2427L11.0005 4.99991" stroke="#9154EB" stroke-width="1.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <div class="first-screen__providers providers">
+                        <div class="providers__text">You're in a good company. 5,000 providers and merchants already
+                            connected with the PayAtlas platform.
+                        </div>
+                        <div class="providers__list">
+                            <img class="providers__logo" src="" width="" height="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-screen__form">
+                    <form class="form-request form-request__request-js" action="" method="post" novalidate>
+                        <div class="form-request__data">
+                            <div class="form-request__title">Leave your request</div>
+
+                            <div class="form-request__fields">
+                                <div class="form-request__fields-wrap">
+                                    <label for="cname" class="form-request__label">Company name</label>
+                                    <input
+                                            id="cname"
+                                            class="form-request__input"
+                                            type="text"
+                                            name="cname"
+                                            placeholder="Enter your company name">
+                                    <span class="form-request__valid-icon"></span>
+                                    <div class="form-request__error"
+                                         data-error_message="3 to 64 characters"
+                                         data-required_message="Field is required*"></div>
+                                </div>
+
+                                <div class="form-request__fields-wrap">
+                                    <label for="url" class="form-request__label">Website link</label>
+                                    <span class="form-request__link-icon"></span>
+                                    <input
+                                            id="url"
+                                            class="form-request__input link"
+                                            type="url"
+                                            name="url"
+                                            placeholder="http://">
+                                    <span class="form-request__valid-icon"></span>
+                                    <div class="form-request__error"
+                                         data-error_message="Please check your link, it is incorrect"
+                                         data-required_message="Field is required*"></div>
+                                </div>
+
+                                <div class="form-request__fields-wrap">
+                                    <label for="email" class="form-request__label">Business email</label>
+                                    <input
+                                            id="email"
+                                            class="form-request__input"
+                                            type="email"
+                                            name="email"
+                                            size="40"
+                                            aria-invalid="false"
+                                            placeholder="your-email@example.com">
+                                    <span class="form-request__valid-icon"></span>
+                                    <div class="form-request__error"
+                                         data-error_message="Please check your email, it is incorrect"
+                                         data-required_message="Field is required*"></div>
+                                </div>
+
+                                <div class="form-request__username-wrap">
+                                    <label for="first-name" class="form-request__label">Full name</label>
+                                    <div class="form-request__username-data">
+                                        <div class="form-request__fields-wrap">
+                                            <input
+                                                    id="first-name"
+                                                    class="form-request__input"
+                                                    type="text"
+                                                    name="first-name"
+                                                    placeholder="First name">
+                                            <span class="form-request__valid-icon"></span>
+                                            <div class="form-request__error"
+                                                 data-error_message="3-64 char"
+                                                 data-required_message="Field is required*"></div>
+                                        </div>
+                                        <div class="form-request__fields-wrap">
+                                            <input
+                                                    id="last-name"
+                                                    class="form-request__input"
+                                                    type="text"
+                                                    name="last-name"
+                                                    placeholder="Last name">
+                                            <span class="form-request__valid-icon"></span>
+                                            <div class="form-request__error"
+                                                 data-error_message="3-64 char"
+                                                 data-required_message="Field is required*"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-request__text">By pressing the "Submit" button you confirm that you have
+                                read
+                                and accepted our Website Terms and Privacy Notice.
+                            </div>
+                            <button class="form-request__submit form-request__submit-js" type="submit">
+                                <span class="form-request__submit-data"><svg width="25" height="24" viewBox="0 0 25 24"
+                                                                             fill="none"
+                                                                             xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M7.40462 5.66484L16.9288 2.39942C17.8808 2.07299 18.6607 1.80558 19.2834 1.6535C19.9 1.50293 20.5551 1.41164 21.1717 1.62915C22.0277 1.93109 22.7009 2.60434 23.0029 3.46032C23.2204 4.07693 23.1291 4.73205 22.9785 5.34861C22.8264 5.9713 22.559 6.75119 22.2326 7.70317L19.031 17.0413C18.5598 18.4157 18.1852 19.5083 17.8385 20.2999C17.5137 21.0416 17.1035 21.8029 16.4136 22.1678C15.5056 22.6479 14.4151 22.6302 13.5232 22.1207C12.8455 21.7336 12.4603 20.9594 12.1598 20.2075C11.8391 19.405 11.5002 18.3008 11.074 16.9118L10.4318 14.8191C10.3837 14.6627 10.3591 14.5835 10.3383 14.527L10.3366 14.5224L10.332 14.5207C10.2758 14.4992 10.1969 14.4736 10.041 14.4237L7.48638 13.6062C6.12739 13.1713 5.04562 12.8252 4.25906 12.4993C3.52006 12.1932 2.76119 11.8026 2.38267 11.1269C1.88318 10.2352 1.87201 9.15055 2.35303 8.24878C2.71756 7.5654 3.46822 7.15925 4.20076 6.83795C4.98045 6.49597 6.05487 6.1276 7.40462 5.66484ZM4.11668 9.19195C3.95769 9.49154 3.96139 9.85131 4.12652 10.1476C4.12972 10.1521 4.1657 10.2014 4.2946 10.2873C4.44636 10.3884 4.67772 10.5079 5.02452 10.6516C5.72466 10.9417 6.72622 11.2631 8.14406 11.7168L10.6506 12.5189C10.6704 12.5252 10.6909 12.5317 10.7118 12.5383C10.9373 12.6096 11.221 12.6994 11.4669 12.8672C11.6798 13.0124 11.8626 13.1974 12.0052 13.412C12.17 13.6599 12.2564 13.9446 12.3251 14.1709C12.3314 14.1919 12.3376 14.2124 12.3438 14.2324L12.9712 16.2769C13.4155 17.7248 13.7307 18.749 14.017 19.4652C14.1588 19.8202 14.2776 20.0576 14.3787 20.2136C14.4634 20.3444 14.5126 20.3818 14.5175 20.3854C14.8136 20.5535 15.1749 20.5594 15.4763 20.401C15.4813 20.3975 15.5318 20.3617 15.6206 20.2338C15.7267 20.0812 15.8531 19.8478 16.0065 19.4976C16.3159 18.7911 16.6642 17.7776 17.1555 16.3449L20.3244 7.10224C20.6711 6.09084 20.9078 5.39757 21.0356 4.87411C21.1675 4.33413 21.1307 4.165 21.1168 4.12563C21.0161 3.84031 20.7917 3.61589 20.5064 3.51524C20.467 3.50136 20.2979 3.46453 19.7579 3.5964C19.2344 3.72424 18.5412 3.96088 17.5298 4.30764L8.10105 7.54035C6.69285 8.02316 5.69813 8.36511 5.00411 8.66952C4.66034 8.8203 4.43149 8.94461 4.28185 9.04882C4.15475 9.13733 4.11979 9.18738 4.11668 9.19195Z"
+                                          fill="#C8CACC"/>
+                                    <path d="M21.5 3.17871L10.6797 14" stroke="#C8CACC" stroke-width="1.5"/>
+                                </svg>
+                                    Send now</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script src="dist/js/main.js"></script>
+
+</body>
+</html>

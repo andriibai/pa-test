@@ -1,0 +1,121 @@
+.header {
+  &:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(17.85% 100% at 100% 0%, #ADFFDF 0%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(27.76% 100% at 0% 0%, #FFF1D6 0%, rgba(245, 244, 241, 0.00) 100%), radial-gradient(276.16% 100% at 50% 0%, #E6D6FF 0%, #F6F0FF 50%, #FFF 100%);
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+  }
+
+  &__logo {
+    &-image {
+      height: 32px;
+      width: 159px;
+    }
+  }
+
+  &__menu {
+    display: none;
+    @include min-lg {
+      display: block;
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      a {
+        text-decoration: none;
+        @include min-lg {
+          color: $color-base-text;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 24px;
+          padding: 8px 16px;
+          border-radius: 8px;
+          &:hover{
+            background: rgba(196, 200, 204, 0.24);
+          }
+          &:focus{
+            background: rgba(196, 200, 204, 0.24);
+            box-shadow: 0 0 0 2px #CEADFF;
+          }
+          &:active{
+            background: rgba(140, 141, 143, 0.24);
+          }
+        }
+      }
+
+    }
+  }
+
+  &__additional {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &__toggler-menu {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    @include min-lg {
+      display: none;
+    }
+  }
+
+  &__autorisation {
+    display: none;
+    @include min-lg {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: rgba(196, 200, 204, 0.24);
+      cursor: pointer;
+      &:hover{
+        background: rgba(175, 177, 178, 0.32);
+      }
+      &:focus{
+        background: rgba(175, 177, 178, 0.32);
+        box-shadow: 0 0 0 2px #CEADFF;
+      }
+      &:active{
+        background: rgba(140, 141, 143, 0.24);
+      }
+    }
+  }
+
+  &__register,
+  &__signin,
+  &__divider{
+    color: $color-base-text;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+}

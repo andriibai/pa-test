@@ -1,0 +1,42 @@
+{
+  "name": "pa-test",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andriibai/pa-test.git"
+  },
+  "author": "Andrii Bai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andriibai/pa-test/issues"
+  },
+  "homepage": "https://github.com/andriibai/pa-test#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-rollup": "^2.17.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.68.0",
+    "webpack-stream": "^7.0.0",
+    "gulp-changed": "^4.0.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
+}
