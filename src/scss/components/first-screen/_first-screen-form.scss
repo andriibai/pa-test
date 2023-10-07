@@ -13,7 +13,7 @@
 
 .form-request {
   &__title {
-    color: #2D2D33;
+    color: $color-base-text;
     font-size: $font-size-h4;
     font-weight: 600;
     line-height: 32px;
@@ -44,15 +44,15 @@
     border-radius: 8px;
     border: 1px solid #DCDEE0;
     background: #FFF;
-    color: #2D2D33;
+    color: $color-base-text;
     font-size: 14px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 23px;
     outline: none;
 
     &:focus {
       border: 1px solid #9154EB;
-      box-shadow: 0px 0px 0px 1px #9154EB;
+      box-shadow: 0 0 0 1px #9154EB;
     }
 
     &.error {
@@ -155,7 +155,7 @@
     font-weight: 600;
     line-height: 24px;
     border-radius: 12px;
-    background: #2D2D33;
+    background: $color-base-text;
     height: 48px;
     width: 100%;
     padding: 12px 24px;
@@ -175,7 +175,7 @@
     }
 
     &:active {
-      background: #2D2D33;
+      background: $color-base-text;
     }
 
 
