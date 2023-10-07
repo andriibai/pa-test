@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (fieldName === 'cname') {
       isValid = inputValue.length >= 3 && inputValue.length <= 64;
     } else if (fieldName === 'url') {
-      const urlRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}([/a-zA-Z0-9.-]*)*$/;
+      const urlRegex = /^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}([/a-zA-Z0-9.-]*)*$/;
       isValid = urlRegex.test(inputValue) && inputValue.length <= 2000;
     } else if (fieldName === 'first-name' || fieldName === 'last-name') {
       isValid = inputValue.length >= 2 && inputValue.length <= 64;
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation.play();
       spanElement.classList.add('hidden-text');
 
-      // Simulate sending to a server (you can replace this with a real fetch request)
+      // Simulate sending to a server (we replace this with a real fetch request)
       const fakeServerResponse = await simulateServerRequest(formData);
 
       animation.stop();

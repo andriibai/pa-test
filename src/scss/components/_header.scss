@@ -42,14 +42,14 @@
           line-height: 24px;
           padding: 8px 16px;
           border-radius: 8px;
-          &:hover{
+          &:hover {
             background: rgba(196, 200, 204, 0.24);
           }
-          &:focus{
+          &:focus {
             background: rgba(196, 200, 204, 0.24);
             box-shadow: 0 0 0 2px #CEADFF;
           }
-          &:active{
+          &:active {
             background: rgba(140, 141, 143, 0.24);
           }
         }
@@ -60,7 +60,6 @@
 
   &__additional {
     display: flex;
-    gap: 8px;
   }
 
   &__search {
@@ -90,19 +89,19 @@
     @include min-lg {
       display: flex;
       align-items: center;
-      gap: 8px;
+      margin-left: 8px;
       padding: 8px 16px;
       border-radius: 8px;
       background: rgba(196, 200, 204, 0.24);
       cursor: pointer;
-      &:hover{
+      &:hover {
         background: rgba(175, 177, 178, 0.32);
       }
-      &:focus{
+      &:focus {
         background: rgba(175, 177, 178, 0.32);
         box-shadow: 0 0 0 2px #CEADFF;
       }
-      &:active{
+      &:active {
         background: rgba(140, 141, 143, 0.24);
       }
     }
@@ -110,12 +109,21 @@
 
   &__register,
   &__signin,
-  &__divider{
+  &__divider {
     color: $color-base-text;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
     text-decoration: none;
+  }
+
+  &__icon-arrow {
+    margin-left: 8px;
+  }
+
+  &__divider {
+    margin-left: 8px;
+    margin-right: 8px;
   }
 
 }

@@ -26,6 +26,10 @@ const paths = {
     src: srcPath + '/images/**/*',
     dist: distPath + 'images',
   },
+  fonts:{
+    src: srcPath + '/fonts/**/*',
+    dist: distPath + 'fonts',
+  }
 }
 
 function compileScssDev () {
@@ -39,7 +43,7 @@ function compileScssDev () {
 
 function compileScssProd () {
   return src(paths.css.src).
-    pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)).
+    pipe(sass()).
     pipe(autoprefixer({ cascade: false })).
     pipe(dest(paths.css.dist))
 }
@@ -52,33 +56,32 @@ function cleanMaps () {
   return src(['dist/css/*.map', 'dist/js/*.map'], { read: false }).
     pipe(clean())
 }
-function concatJs () {
+function compileJs () {
   return src(paths.js.src).
     pipe(changed('./dist/js/')).
-    // .pipe(babel())
+    pipe(babel()).
     pipe(webpack(require('./webpack.config.js'))).
     pipe(dest(paths.js.dist))
 }
 
-function minifyJs () {
-  return src('dist/js/*.js').pipe(uglify()).pipe(dest(paths.js.dist))
-}
-
 function compileImage () {
   return src(paths.img.src).
-    pipe(changed('./build/img/')).
+    pipe(changed('./dist/images/')).
     pipe(dest(paths.img.dist))
+}
+
+function compileFonts() {
+  return src(paths.fonts.src).
+    pipe(changed('./dist/fonts/')).
+    pipe(dest(paths.fonts.dist))
 }
 
 function watchScssDev () {
   watch(paths.css.src, compileScssDev)
 }
 
-exports.development = series(compileScssDev, compileImage, concatJs,
-  watchScssDev)
+exports.development = series(compileScssDev, compileImage, compileFonts, compileJs, watchScssDev)
 
-exports.production = series(compileScssProd, compileImage, minifyCss, concatJs,
-  minifyJs,
-  cleanMaps)
+exports.production = series(compileScssProd, compileImage, compileFonts, minifyCss, compileJs, cleanMaps)
 
 exports.default = exports.development

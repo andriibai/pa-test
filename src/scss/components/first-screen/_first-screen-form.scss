@@ -1,66 +1,73 @@
 .first-screen {
-  &__form{
+  &__form {
     max-width: 566px;
     border-radius: 24px;
     background: #FFF;
-    box-shadow: 0px 48px 48px -16px rgba(45, 45, 51, 0.12), 0px 8px 16px 0px rgba(45, 45, 51, 0.12), 0px 48px 48px -40px rgba(116, 57, 204, 0.16), 0px 0px 2px 0px rgba(45, 45, 51, 0.12);
+    box-shadow: 0 48px 48px -16px rgba(45, 45, 51, 0.12), 0px 8px 16px 0px rgba(45, 45, 51, 0.12), 0px 48px 48px -40px rgba(116, 57, 204, 0.16), 0px 0px 2px 0px rgba(45, 45, 51, 0.12);
     padding: 24px;
+    @include min-lg{
+      padding: 32px 40px;
+    }
   }
 }
 
-.form-request{
-  &__data{}
-  &__title{
+.form-request {
+  &__title {
+    color: #2D2D33;
     font-size: $font-size-h4;
     font-weight: 600;
     line-height: 32px;
     letter-spacing: -0.5px;
     margin-bottom: 32px;
   }
-  &__fields{
-    &-wrap{
+
+  &__fields {
+    &-wrap {
       position: relative;
       margin-bottom: 24px;
       width: 100%;
     }
   }
-  &__label{
+
+  &__label {
     display: inline-block;
     font-size: $font-size-body-default;
     font-weight: 450;
     line-height: 24px;
     margin-bottom: 8px;
   }
-  &__input{
+
+  &__input {
     position: relative;
     width: 100%;
     padding: 8px 36px 8px 12px;
     border-radius: 8px;
     border: 1px solid #DCDEE0;
     background: #FFF;
+    color: #2D2D33;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
     outline: none;
 
-    &:focus{
+    &:focus {
       border: 1px solid #9154EB;
       box-shadow: 0px 0px 0px 1px #9154EB;
     }
 
-    &.error{
+    &.error {
       border: 1px solid #FF7F00;
       box-shadow: 0 0 0 1px #FF7F00;
       outline: none;
     }
 
-    &.link{
+    &.link {
       padding-left: 40px;
     }
   }
 
-  &__link-icon{
-    &:before{
+  &__link-icon {
+    &:before {
       content: "";
       position: absolute;
       background-image: url("../images/ic-link.svg");
@@ -73,7 +80,7 @@
     }
   }
 
-  &__valid-icon{
+  &__valid-icon {
     &.valid {
       &:after {
         content: "";
@@ -89,21 +96,25 @@
     }
   }
 
-  &__username-wrap{
-    .form-request__valid-icon{
-      &:after{
-        top: 20px;
+  &__username-wrap {
+    .form-request__valid-icon {
+      &:after {
+        top: 21px;
       }
     }
   }
 
-  &__username-data{
+  &__username-data {
     display: flex;
-    gap: 8px;
+    justify-content: space-between;
     margin-bottom: 8px;
+
+    .form-request__fields-wrap {
+      width: calc(100% / 2 - 8px);
+    }
   }
 
-  &__error{
+  &__error {
     position: absolute;
     color: #FF7F00;
     font-size: 14px;
@@ -111,6 +122,7 @@
     line-height: 20px;
     margin-top: 2px;
     margin-left: 23px;
+
     &.error {
       &:before {
         content: "";
@@ -124,14 +136,16 @@
       }
     }
   }
-  &__text{
+
+  &__text {
     color: #696D70;
     font-size: $font-size-body-default;
     font-weight: 450;
     line-height: 20px;
     margin-bottom: 16px;
   }
-  &__submit{
+
+  &__submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,13 +161,29 @@
     width: 100%;
     padding: 12px 24px;
     cursor: pointer;
+    transition: 1s;
 
-    &-data{
+    &:hover {
+      background: #424347;
+    }
+
+    &:focus {
+      background: #424347;
+      box-shadow: 0px 0px 0px 2px #CEADFF;
+    }
+
+    &:active {
+      background: #2D2D33;
+    }
+
+
+    &-data {
       display: flex;
       gap: 8px;
       position: absolute;
     }
-    .hidden-text{
+
+    .hidden-text {
       opacity: 0;
     }
 
