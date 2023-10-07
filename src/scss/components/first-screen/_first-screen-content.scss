@@ -132,7 +132,10 @@
 
   &__logo {
     &:not(:last-child) {
-      margin-right: 24px;
+      margin: 0 12px;
+      @include min-md {
+        margin: 0 24px 0 0;
+      }
     }
   }
 }
